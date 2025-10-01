@@ -37,7 +37,7 @@
 - Tùy chọn **Remember me** (lưu username vào `localStorage`).  
 - Validation cơ bản bằng JavaScript.  
 
-📂 Source code: [index.html](main/index.html)
+📂 Source code: [index.html](../Labs/Lab04/Demo%20Form%20Login.html)
 
 Demo trên GitHub Pages:  
 👉 [https://N23DCPT047.github.io/NhapMonCongNghePhanMem/](https://N23DCPT047.github.io/NhapMonCongNghePhanMem/)
