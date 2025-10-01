@@ -15,7 +15,7 @@
 - **Hệ thống thanh toán**: tích hợp xử lý giao dịch.
 
 ![Use Case Diagram](../Lab02/Use%20Case%20App.jpg)
-*(Hình vẽ export từ file PlantUML `usecase.puml`)*
+
 
 ---
 
@@ -24,12 +24,12 @@
 
 ![Sequence Diagram](../Lab03/SQ%Diagram.jpg)
 
-*(Hình vẽ export từ file PlantUML `sequence.puml`)*
+
 
 ---
 
 ## 3. Giao diện Form Login (Front-end)
-**File:** `index.html`  
+**File:** `Demo Form Login.html`  
 **Ngôn ngữ:** HTML, CSS, JavaScript  
 **Tính năng:**
 - Nhập `username` (dạng email) và `password`.  
