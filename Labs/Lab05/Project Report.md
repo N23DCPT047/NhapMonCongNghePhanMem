@@ -14,7 +14,7 @@
 - **Quản lý khách sạn**: quản lý phòng, xem báo cáo.  
 - **Hệ thống thanh toán**: tích hợp xử lý giao dịch.
 
-![Use Case Diagram](../Lab02/Use%20Case%20App.jpg)
+![Use Case Diagram](../Lab02/Use%20Case%20Diagram.jpg)
 
 
 ---
@@ -22,7 +22,7 @@
 ## 2. Sequence Diagram
 **Mô tả:** Quy trình “Đặt phòng và Thanh toán trực tuyến”.
 
-![Sequence Diagram](../Lab03/SQ%Diagram.jpg)
+![Sequence Diagram](../Lab03/SQ%20Diagram.jpg)
 
 
 
