@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Login - Demo</title>
+  <style>
+    :root{--bg:#f4f6fb;--card:#ffffff;--accent:#2b7cff;--danger:#e74c3c}
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;min-height:100vh;display:flex;align-items:center;justify-content:center;margin:0;background:linear-gradient(135deg,#eef2ff 0%,#f6fbff 100%)}
+    .card{width:360px;padding:28px;border-radius:12px;background:var(--card);box-shadow:0 8px 24px rgba(20,30,60,0.08)}
+    h1{font-size:20px;margin:0 0 8px}
+    p.sub{margin:0 0 18px;color:#6b7280;font-size:13px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#111827}
+    input[type=text],input[type=password]{width:100%;padding:10px 12px;border-radius:8px;border:1px solid #e6e9ef;font-size:14px}
+    .row{display:flex;gap:10px}
+    .actions{display:flex;gap:8px;margin-top:14px}
+    button{flex:1;padding:10px 12px;border-radius:8px;border:0;font-weight:600;cursor:pointer}
+    button.login{background:var(--accent);color:#fff}
+    button.cancel{background:#eef2f2;color:#0f172a}
+    .meta{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+    .error{color:var(--danger);font-size:13px;margin-top:8px}
+    .small{font-size:13px;color:#6b7280}
+    .remember{display:flex;gap:8px;align-items:center}
+    @media (max-width:420px){.card{width:92%;padding:18px}}
+  </style>
+</head>
+<body>
+  <form class="card" id="loginForm" onsubmit="return false;" autocomplete="off">
+    <h1>Đặt phòng khách sạn</h1>
+    <p class="sub">Đăng nhập vào hệ thống đặt phòng khách sạn.</p>
+
+    <label for="username">Email</label>
+    <input id="username" name="username" type="text" placeholder="vd: email@example.com" />
+
+    <label for="password" style="margin-top:12px">Password</label>
+    <input id="password" name="password" type="password" placeholder="Mật khẩu" />
+
+    <div class="meta">
+      <label class="remember"><input id="remember" type="checkbox" /> <span class="small">Remember me</span></label>
+      <a href="#" id="forgotLink" class="small">Quên mật khẩu?</a>
+    </div>
+
+    <div class="error" id="errorMsg" aria-live="polite" style="display:none"></div>
+
+    <div class="actions">
+      <button type="button" class="cancel" id="btnCancel">Cancel</button>
+      <button type="submit" class="login" id="btnLogin">Login</button>
+    </div>
+
+    <p class="small" style="text-align:center;margin-top:12px;color:#9aa4b2">N23DCPT047
+  </form>
+
+  <script>
+    // --- Helpers ---
+    const el = id => document.getElementById(id);
+    const showError = msg => {
+      const e = el('errorMsg');
+      e.style.display = msg ? 'block' : 'none';
+      e.textContent = msg || '';
+    }
+
+    // --- Validation rules ---
+    function validate(username, password) {
+      if (!username || !password) return 'Username và Password không được để trống.';
+      // Basic email-like check
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(username)) return 'Username phải là email hợp lệ (vd: a@b.com).';
+      if (password.length < 6) return 'Password phải có ít nhất 6 ký tự.';
+      return null; // ok
+    }
+
+    // --- Remember me (localStorage) ---
+    const STORAGE_KEY = 'demo_login_username_v1';
+    function saveRemember(username) {
+      try {
+        localStorage.setItem(STORAGE_KEY, username);
+      } catch (e) { /* ignore */ }
+    }
+    function clearRemember() {
+      try { localStorage.removeItem(STORAGE_KEY);} catch (e) {}
+    }
+    function loadRemember() {
+      try { return localStorage.getItem(STORAGE_KEY);} catch (e) {return null}
+    }
+
+    // --- Wire events ---
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const saved = loadRemember();
+      if (saved) {
+        el('username').value = saved;
+        el('remember').checked = true;
+      }
+
+      el('btnLogin').addEventListener('click', ()=>{
+        showError('');
+        const username = el('username').value.trim();
+        const password = el('password').value;
+        const remember = el('remember').checked;
+
+        const err = validate(username, password);
+        if (err) { showError(err); return; }
+
+        // Simulate server call (demo)
+        el('btnLogin').disabled = true;
+        el('btnLogin').textContent = 'Processing...';
+
+        // fake async
+        setTimeout(()=>{
+          el('btnLogin').disabled = false;
+          el('btnLogin').textContent = 'Login';
+
+          // For demo: accept any credentials that pass validation
+          if (remember) saveRemember(username); else clearRemember();
+
+          // Show success (in real app: redirect to dashboard)
+          alert('Demo: Đăng nhập thành công');
+          // optionally redirect: window.location.href = '/dashboard.html';
+        }, 900);
+      });
+
+      el('btnCancel').addEventListener('click', ()=>{
+        el('loginForm').reset();
+        showError('');
+        clearRemember();
+      });
+
+      el('forgotLink').addEventListener('click', (e)=>{
+        e.preventDefault();
+        alert('Demo: Chuyển tiếp đến trang đặt lại mật khẩu.');
+      });
+    });
+  </script>
+</body>
+</html>
