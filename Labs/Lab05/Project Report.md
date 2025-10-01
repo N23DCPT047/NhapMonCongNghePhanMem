@@ -72,6 +72,6 @@ git add .
 git commit -m "Initial commit: add UML + login form"
 
 # kết nối với GitHub
-git remote add origin https://github.com/N23DCPT047/hotel-login-demo.git](https://n23dcpt047.github.io/NhapMonCongNghePhanMem/
+git remote add origin https://n23dcpt047.github.io/NhapMonCongNghePhanMem/
 git branch -M main
 git push -u origin main
