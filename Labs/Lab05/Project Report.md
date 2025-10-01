@@ -1,58 +1,77 @@
-# 📘 Báo Cáo Dự Án: Hệ Thống Chấm Công Nhân Viên
+# Hotel Booking Management System – Demo Project
 
-## 1. Giới thiệu
-
-- Báo cáo này trình bày các **artifacts** và mô tả **quy trình làm việc** trong quá trình xây dựng hệ thống chấm công nhân viên.
-- Các nội dung bao gồm:
-  - Phân tích chức năng hệ thống
-  - Use Case Diagram, Sequence Diagram
-  - Source code giao diện đăng nhập (HTML, CSS, JS)
-  - Mô tả Use Case chuẩn UML
+## 🎯 Mục tiêu
+- Hoàn thiện quy trình phần mềm từ **thiết kế** → **lập trình** → **triển khai**.  
+- Tích hợp các artifacts: Use Case Diagram, Sequence Diagram, giao diện Front-end (Form Login).  
+- Quản lý version bằng Git & GitHub.
 
 ---
 
-## 2. Phân tích mục tiêu hệ thống
+## 1. Use Case Diagram
+**Mô tả:** Hệ thống quản lý đặt phòng khách sạn gồm 3 tác nhân chính:
+- **Khách hàng**: tìm kiếm, đặt phòng, thanh toán.  
+- **Nhân viên lễ tân**: check-in, check-out, quản lý booking.  
+- **Quản lý khách sạn**: quản lý phòng, xem báo cáo.  
+- **Hệ thống thanh toán**: tích hợp xử lý giao dịch.
 
-- **Hệ thống lựa chọn**: Quản lý chấm công nhân viên
-- **Mục tiêu chính**:
-  - Hỗ trợ nhân viên chấm công Check-in/Checkout
-  - Theo dõi lịch sử công
-  - Tạo báo cáo cho quản lý
-- **Nhu cầu thực tế**:
-  - Minh bạch giờ làm
-  - Giảm sai sót tính công
-  - Tối ưu quản lý ca và nhân sự
+![Use Case Diagram](../Lab02/Use%20Case%20App.jpg)
+*(Hình vẽ export từ file PlantUML `usecase.puml`)*
 
 ---
 
-## 3. Sơ đồ Use Case
+## 2. Sequence Diagram
+**Mô tả:** Quy trình “Đặt phòng và Thanh toán trực tuyến”.
 
-### 📌 Tổng quan hệ thống chấm công
+![Sequence Diagram](../Lab03/SQ%Diagram.jpg)
 
-![Use Case Tổng quan](../Lab02/Use%20Case%20App.jpg)
-
----
-
-### 📌 Quản lý nhân viên (Use Case chi tiết)
-
-![Use Case Quản lý nhân viên](../Lab03/SQ%Diagram.jpg)
+*(Hình vẽ export từ file PlantUML `sequence.puml`)*
 
 ---
 
+## 3. Giao diện Form Login (Front-end)
+**File:** `index.html`  
+**Ngôn ngữ:** HTML, CSS, JavaScript  
+**Tính năng:**
+- Nhập `username` (dạng email) và `password`.  
+- Nút **Login** (giả lập xác thực) và **Cancel** (reset form).  
+- Tùy chọn **Remember me** (lưu username vào `localStorage`).  
+- Validation cơ bản bằng JavaScript.  
 
-## 5. Source Code Giao Diện Đăng Nhập (Login Form)
+📂 Source code: [index.html](index.html)
 
-📁 **Thư mục chứa mã nguồn**:  
-🔗 [https://github.com/Lanne-0402/Nhap-mon-CNPM/tree/main/Lab04](https://github.com/Lanne-0402/Nhap-mon-CNPM/tree/main/labs/Lab04)
+Demo trên GitHub Pages:  
+👉 `https://USERNAME.github.io/hotel-login-demo/`
 
-### 💻 Clone về máy:
+---
+
+## 4. Quy trình làm việc
+1. **Thiết kế**
+   - Vẽ Use Case bằng PlantUML (`usecase.puml`).  
+   - Vẽ Sequence Diagram cho quy trình nghiệp vụ (`sequence.puml`).  
+
+2. **Phát triển**
+   - Code Form Login (`index.html`).  
+   - Test local bằng trình duyệt.  
+
+3. **Tích hợp**
+   - Gom artifacts vào repo GitHub.  
+   - Tạo thư mục `docs/` để lưu hình UML export (PNG).  
+
+4. **Triển khai**
+   - Dùng GitHub Pages để chạy demo Form Login.  
+
+---
+
+## 5. Quản lý source code (Git/GitHub)
+
+### Khởi tạo & push repo
 ```bash
-git clone https://github.com/Lanne-0402/Nhap-mon-CNPM.git
-cd Nhap-mon-CNPM
-```
+# clone repo hoặc tạo repo mới
+git init
+git add .
+git commit -m "Initial commit: add UML + login form"
 
-## Triển khai demo bằng GitHub Pages
-
-GitHub Pages được sử dụng để triển khai giao diện Login Form
-Đường dẫn demo:
-Link demo: https://lanne-0402.github.io/Nhap-mon-CNPM/labs/Lab04
+# kết nối với GitHub
+git remote add origin https://github.com/USERNAME/hotel-login-demo.git
+git branch -M main
+git push -u origin main
