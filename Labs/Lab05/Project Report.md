@@ -1,4 +1,4 @@
-# Hotel Booking Management System – Demo Project
+# Hệ thống đặt phòng khách sạn – Demo
 
 ## 🎯 Mục tiêu
 - Hoàn thiện quy trình phần mềm từ **thiết kế** → **lập trình** → **triển khai**.  
