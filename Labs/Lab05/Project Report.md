@@ -29,7 +29,7 @@
 ---
 
 ## 3. Giao diện Form Login (Front-end)
-**File:** `Demo Form Login.html`  
+**File:** `index.html`  
 **Ngôn ngữ:** HTML, CSS, JavaScript  
 **Tính năng:**
 - Nhập `username` (dạng email) và `password`.  
@@ -37,7 +37,7 @@
 - Tùy chọn **Remember me** (lưu username vào `localStorage`).  
 - Validation cơ bản bằng JavaScript.  
 
-📂 Source code: [Demo%20Form%20Login.html](Demo%20Form%20Login.html)
+📂 Source code: [index.html](index.html)
 
 Demo trên GitHub Pages:  
 👉 `https://N23DCPT047.github.io/hotel-login-demo/`
@@ -47,10 +47,10 @@ Demo trên GitHub Pages:
 ## 4. Quy trình làm việc
 1. **Thiết kế**
    - Vẽ Use Case.  
-   - Vẽ Sequence Diagram cho quy trình nghiệp vụ (`sequence.puml`).  
+   - Vẽ Sequence Diagram cho quy trình nghiệp vụ.  
 
 2. **Phát triển**
-   - Code Form Login (`Demo Form Login.html`).  
+   - Code Form Login (`index.html`).  
    - Test local bằng trình duyệt.  
 
 3. **Tích hợp**
