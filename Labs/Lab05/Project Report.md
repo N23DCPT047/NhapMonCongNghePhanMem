@@ -37,25 +37,25 @@
 - Tùy chọn **Remember me** (lưu username vào `localStorage`).  
 - Validation cơ bản bằng JavaScript.  
 
-📂 Source code: [index.html](index.html)
+📂 Source code: [Demo%20Form%20Login.html](Demo%20Form%20Login.html)
 
 Demo trên GitHub Pages:  
-👉 `https://USERNAME.github.io/hotel-login-demo/`
+👉 `https://N23DCPT047.github.io/hotel-login-demo/`
 
 ---
 
 ## 4. Quy trình làm việc
 1. **Thiết kế**
-   - Vẽ Use Case bằng PlantUML (`usecase.puml`).  
+   - Vẽ Use Case.  
    - Vẽ Sequence Diagram cho quy trình nghiệp vụ (`sequence.puml`).  
 
 2. **Phát triển**
-   - Code Form Login (`index.html`).  
+   - Code Form Login (`Demo Form Login.html`).  
    - Test local bằng trình duyệt.  
 
 3. **Tích hợp**
    - Gom artifacts vào repo GitHub.  
-   - Tạo thư mục `docs/` để lưu hình UML export (PNG).  
+ 
 
 4. **Triển khai**
    - Dùng GitHub Pages để chạy demo Form Login.  
@@ -72,6 +72,6 @@ git add .
 git commit -m "Initial commit: add UML + login form"
 
 # kết nối với GitHub
-git remote add origin https://github.com/USERNAME/hotel-login-demo.git
+git remote add origin https://github.com/N23DCPT047/hotel-login-demo.git
 git branch -M main
 git push -u origin main
