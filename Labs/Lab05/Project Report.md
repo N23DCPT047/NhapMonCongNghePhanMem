@@ -40,7 +40,7 @@
 📂 Source code: [index.html](index.html)
 
 Demo trên GitHub Pages:  
-👉 `https://N23DCPT047.github.io/hotel-login-demo/`
+👉 [https://N23DCPT047.github.io/NhapMonCongNghePhanMem/](https://N23DCPT047.github.io/NhapMonCongNghePhanMem/)
 
 ---
 
