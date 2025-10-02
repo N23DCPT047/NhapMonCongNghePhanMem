@@ -17,6 +17,8 @@ def test_login_success(driver):
     driver.find_element(By.ID, "password").send_keys("123456")
     driver.find_element(By.ID, "btnLogin").click()
 
+     WebDriverWait(driver, 3).until(EC.alert_is_present())
+
     alert = driver.switch_to.alert
     assert "đăng nhập thành công" in alert.text.lower()
     alert.accept()
