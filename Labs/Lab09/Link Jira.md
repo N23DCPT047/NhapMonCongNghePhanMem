@@ -1,1 +1,1 @@
-[App quản lý chấm công - Jira](https://giahan1835.atlassian.net/jira/software/projects/AQLCCNVN3/summary)
+[Jira - Hệ Thống Đặt Phòng Khách Sạn](https://n23dcpt047-hotelbooking.atlassian.net/jira/software/projects/SCRUM/list?filter=createdDate+%3E%3D+-1w&atlOrigin=eyJpIjoiN2I3MjNiZTk5ZWE5NDczOTg1NzBkOTUyMTgzNTZhODIiLCJwIjoiaiJ9)
