@@ -48,9 +48,9 @@ Xử lý Thanh toán trực tuyến
 ---
 
 ## 📐 Thiết kế hệ thống  
-- **Use Case Diagram**: (../Lab02/../Lab02/Use%20Case%20Diagram.jpg)
-- **Sequence Diagram**: (../Lab03/SQ%20Diagram.jpg)
-- **ERD (Entity Relationship Diagram)**: (../Lab05/ERD.jpg)
+- **Use Case Diagram**: [Use Case Diagram](../Lab02/../Lab02/Use%20Case%20Diagram.jpg)
+- **Sequence Diagram**: [Sequence Diagram](../Lab03/SQ%20Diagram.jpg)
+- **ERD (Entity Relationship Diagram)**: [ERD](../Lab05/ERD.jpg)
   
 ---
 
