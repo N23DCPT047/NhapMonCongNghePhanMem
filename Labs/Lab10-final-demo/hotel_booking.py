@@ -1,0 +1,28 @@
+
+
+bookings = []  
+
+def is_overlap(checkin1, checkout1, checkin2, checkout2):
+    """Kiểm tra trùng ngày"""
+    return not (checkout1 <= checkin2 or checkout2 <= checkin1)
+
+def add_booking(customer_id, room_id, checkin, checkout):
+    if not customer_id or not room_id:
+        return {"status": "error", "message": "Thiếu thông tin khách hoặc phòng"}
+    if checkin >= checkout:
+        return {"status": "error", "message": "Ngày checkin/checkout không hợp lệ"}
+
+   
+    for b in bookings:
+        if b["room_id"] == room_id and is_overlap(checkin, checkout, b["checkin"], b["checkout"]):
+            return {"status": "error", "message": "Phòng đã được đặt trong khoảng thời gian này"}
+
+   
+    new_booking = {
+        "customer_id": customer_id,
+        "room_id": room_id,
+        "checkin": checkin,
+        "checkout": checkout
+    }
+    bookings.append(new_booking)
+    return {"status": "success", "message": "Đặt phòng thành công"}
