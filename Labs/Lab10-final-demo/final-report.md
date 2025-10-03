@@ -64,6 +64,7 @@ Demo trên GitHub Pages:
 
 ## 5. Khởi tạo DB
 
+
 CREATE TABLE KhachHang (
     maKH INT PRIMARY KEY AUTO_INCREMENT,
     hoTen VARCHAR(100),
@@ -105,9 +106,41 @@ CREATE TABLE HoaDon (
     maDP INT,
     FOREIGN KEY (maDP) REFERENCES DatPhong(maDP)
 );
+
+
 ## 6. Kết quả test và sprint report
 ![Kết quả test Selenium](../Lab10-final-demo/selenium_pass.jpg)
 ![Kết quả Unit Test module](../Lab10-final-demo/unit_test.png)
 ![Backlog report](../Lab09/Evidence/backlog1.jpg)
 ![Board report](../Lab09/Evidence/board.jpg)
 ![Burndown report](../Lab09/Evidence/burndown.jpg)
+
+## 7. Kế luận và định hướng mở rộng
+
+### 7.1 Kết luận
+
+Hệ thống đặt phòng khách sạn đã được xây dựng và kiểm thử thành công với các chức năng cơ bản:
+
+Người dùng có thể đặt phòng, và quản lý thông tin đặt phòng trực tuyến.
+
+Quản trị viên có thể quản lý khách sạn, phòng, và khách hàng một cách dễ dàng.
+
+Cấu trúc cơ sở dữ liệu rõ ràng, hỗ trợ mở rộng về lâu dài.
+
+Quy trình phát triển theo sprint đảm bảo tiến độ và chất lượng sản phẩm.
+
+Kết quả cho thấy hệ thống đã đáp ứng đúng yêu cầu đặt ra, giảm thiểu thời gian đặt phòng truyền thống, nâng cao trải nghiệm người dùng và hiệu quả vận hành của khách sạn.
+
+### 7.2 Định hướng mở rộng
+
+Để hoàn thiện và nâng cao giá trị sử dụng, hệ thống có thể được mở rộng theo các hướng sau:
+
+Tìm kiếm phòng theo tên, bộ lọc (vị trí, đánh giá, giá tiền,...)
+
+Ứng dụng di động (Mobile App) trên iOS/Android để đặt phòng mọi lúc mọi nơi.
+
+Hệ thống đánh giá & phản hồi để khách hàng chấm điểm, nhận xét khách sạn/phòng.
+
+Tích hợp AI gợi ý phòng phù hợp theo nhu cầu, lịch sử đặt phòng.
+
+Tích hợp bản đồ & gợi ý du lịch để người dùng xem vị trí khách sạn và các dịch vụ xung quanh.
