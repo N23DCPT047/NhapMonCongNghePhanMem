@@ -117,7 +117,7 @@ CREATE TABLE HoaDon (
 
 ## 7. Kế luận và định hướng mở rộng
 
-### 7.1 Kết luận
+### 7.1. Kết luận
 
 Hệ thống đặt phòng khách sạn đã được xây dựng và kiểm thử thành công với các chức năng cơ bản:
 
@@ -131,7 +131,7 @@ Quy trình phát triển theo sprint đảm bảo tiến độ và chất lượ
 
 Kết quả cho thấy hệ thống đã đáp ứng đúng yêu cầu đặt ra, giảm thiểu thời gian đặt phòng truyền thống, nâng cao trải nghiệm người dùng và hiệu quả vận hành của khách sạn.
 
-### 7.2 Định hướng mở rộng
+### 7.2. Định hướng mở rộng
 
 Để hoàn thiện và nâng cao giá trị sử dụng, hệ thống có thể được mở rộng theo các hướng sau:
 
