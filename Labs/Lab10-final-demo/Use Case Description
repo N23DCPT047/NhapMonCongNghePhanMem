@@ -1,0 +1,85 @@
+    Use Case 1: Đặt phòng
+
+1. Tên Use Case: Đặt phòng
+
+2. Tác nhân chính: Khách hàng
+
+3. Mục tiêu: Cho phép khách hàng đặt phòng khách sạn trực tuyến.
+
+4. Điều kiện tiên quyết:
+
+Khách hàng đã đăng nhập vào hệ thống.
+
+Phòng còn trống.
+
+5. Luồng sự kiện chính (Main Flow):
+
+Khách hàng tìm kiếm và chọn phòng mong muốn.
+
+Hệ thống hiển thị chi tiết phòng (giá, tiện nghi, số lượng còn lại).
+
+Khách hàng nhập thông tin đặt phòng (số người, ngày check-in, check-out).
+
+Hệ thống kiểm tra tình trạng phòng.
+
+Hệ thống tạo đơn đặt phòng tạm thời.
+
+Khách hàng xác nhận đặt phòng.
+
+Hệ thống chuyển sang bước thanh toán.
+
+6. Luồng thay thế (Alternative Flow):
+
+Thông tin nhập sai (ngày check-out < ngày check-in) → Hệ thống báo lỗi.
+
+Phòng đã hết → Hệ thống thông báo và đề xuất phòng khác.
+
+Khách hàng hủy đặt trước khi thanh toán → Đơn đặt phòng tạm thời bị xóa.
+
+7. Điều kiện sau (Post-condition):
+
+Đơn đặt phòng được lưu trong hệ thống.
+
+Sẵn sàng cho bước thanh toán.
+
+    Use Case 2: Thanh toán trực tuyến
+
+1. Tên Use Case: Thanh toán trực tuyến
+
+2.a. Tác nhân chính: Khách hàng
+
+2.b. Tác nhân phụ: Hệ thống thanh toán (Payment Gateway)
+
+3. Mục tiêu: Hoàn tất thanh toán cho đơn đặt phòng.
+
+4. Điều kiện tiên quyết:
+
+Khách hàng đã tạo đơn đặt phòng.
+
+Hệ thống kết nối được với cổng thanh toán.
+
+5. Luồng sự kiện chính (Main Flow):
+
+Khách hàng chọn phương thức thanh toán (thẻ tín dụng, ví điện tử, ngân hàng trực tuyến).
+
+Hệ thống chuyển hướng đến cổng thanh toán.
+
+Khách hàng nhập thông tin thanh toán và xác nhận.
+
+Cổng thanh toán xử lý và trả về kết quả.
+
+Nếu thành công → Hệ thống cập nhật trạng thái đơn đặt phòng thành “Đã thanh toán”.
+
+Hệ thống gửi email/SMS xác nhận đặt phòng thành công cho khách hàng.
+
+6. Luồng thay thế (Alternative Flow):
+
+Khách hàng hủy thanh toán giữa chừng → Đơn đặt phòng vẫn giữ ở trạng thái “Chưa thanh toán”.
+
+Thanh toán thất bại (thẻ không hợp lệ, không đủ tiền, kết nối lỗi) → Hệ thống báo lỗi và yêu cầu thử lại hoặc chọn phương thức khác.
+
+7. Điều kiện sau (Post-condition):
+
+Đơn đặt phòng có trạng thái Đã thanh toán (nếu thành công).
+
+Biên nhận được gửi đến khách hàng.
