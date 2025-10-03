@@ -47,6 +47,13 @@ Xử lý Thanh toán trực tuyến
 
 ---
 
+## 📐 Thiết kế hệ thống  
+- **Use Case Diagram**: (../Lab02/../Lab02/Use%20Case%20Diagram.jpg)
+- **Sequence Diagram**: (../Lab03/SQ%20Diagram.jpg)
+- **ERD (Entity Relationship Diagram)**: (../Lab05/ERD.jpg)
+  
+---
+
 ## 💻 Công nghệ sử dụng  
 - **Ngôn ngữ**: Java / Python / JavaScript 
 - **IDE**: Notepad++
